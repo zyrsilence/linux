@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>基本类型传递</title>
+</head>
+
+<body>
+<script>
+	//如果实参传递是基本类型，则进行值传递
+	function increment(number){
+		number=number+1;
+		return number;
+		}
+	var a=1;
+	var x=increment(a);
+	document.write(a);
+	document.write(x);
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>参数异常情况</title>
+</head>
+
+<body>
+<script>
+	function add(x,y,z){
+		return x+y+z;
+		}
+	//实参数比形参数少
+	document.write(add(1,2)+"<br/>");//NaN 
+	//实参数比形参数多
+	document.write(add(1,2,3,4)+"<br/>"); //会忽略多的
+	//不定参： 在函数中有一个隐含的变量  arguments=>数组,他 里面存有传过来的所有的实参的值【当前函数的内置属性】
+	function add2(){
+		var sum=0;
+		for(var i=0;i<arguments.length;i++){
+			sum+=arguments[i];
+			}
+		return sum;
+		}
+	document.write(add2(1,2,34,5,6)+"<br/>");
+</script>
+</body>
+</html>

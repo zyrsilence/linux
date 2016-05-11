@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>引用类型传递</title>
+</head>
+
+<body>
+	<script>
+	//如果实参传递是引用类型，则进行引用传递【地址传递tip】
+//	function increment(p){
+//		p.age=p.age+1;
+//		return age   //返回给调用的值[地址]；
+//		}
+//	var person={name:"smith",age:20};
+//  var	age=increment(person);
+//	document.write(age)
+	function increment(p){
+		p.age=p.age+1;
+		}
+	var person={name:"smith",age:20};
+	increment(person);
+	document.write(person.name+" "+person.age);
+</script>
+</body>
+</html>
